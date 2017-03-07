@@ -12,7 +12,7 @@ module.exports = function (app) {
     // ---------- TEMPLATES -------------
     
     // SUPPORT ROUTES
-    const supportRoutes = require('./support_routes');
+    const supportRoutes = require('./routes_support');
     app.use('/app', supportRoutes);
     
 };
