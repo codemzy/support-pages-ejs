@@ -10,9 +10,12 @@ router.get('/', function(req, res) {
     res.render('pages/support/index');
 });
 
-// about page 
-router.get('/about', function(req, res) {
-    res.render('pages/about');
+// faq pages
+router.get('/*', function(req, res) {
+    var faq = { title: "This is the title", content: "Any code of your own that you haven't looked at for six or more months might as well have been written by someone else." };
+    res.render('pages/support/faq', {
+        content: faq
+    });
 });
 
 module.exports = router;
