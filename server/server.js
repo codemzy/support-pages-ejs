@@ -6,6 +6,9 @@ app.use('/js', express.static(process.cwd() + '/public/js'));
 app.use('/css', express.static(process.cwd() + '/public/css'));
 app.use('/img', express.static(process.cwd() + '/public/img'));
 
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+
 // set the port
 app.set('port', (process.env.PORT || 8080));
 

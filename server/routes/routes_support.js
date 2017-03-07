@@ -3,9 +3,6 @@
 const express = require('express');
 const router = express.Router();
 
-// set the view engine to ejs
-router.set('view engine', 'ejs');
-
 // ROUTES -----------------------------------------------------
 
 // index page 
