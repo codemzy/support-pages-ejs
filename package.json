@@ -1,0 +1,19 @@
+{
+  "name": "support-pages-ejs",
+  "description": "A simple support pages server side app built with EJS",
+  "repository": "https://github.com/codemzy/support-pages-ejs",
+  "main": "server.js",
+  "author": "codemzy",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^1.0.0",
+    "express": "^4.6.1"
+  },
+  "engines": {
+    "node": "4.6.1"
+  }
+}
