@@ -7,7 +7,7 @@ const router = express.Router();
 
 // index page 
 router.get('/', function(req, res) {
-    res.render('pages/index');
+    res.render('pages/support/index');
 });
 
 // about page 
