@@ -13,8 +13,8 @@ app.set('view engine', 'ejs');
 app.set('port', (process.env.PORT || 8080));
 
 // routes
-// const routes = require('./routes/routes.js');
-// routes(app);
+const routes = require('./routes/routes.js');
+routes(app);
 
 // start the server
 app.listen(app.get('port'), function() {
