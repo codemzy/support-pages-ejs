@@ -1,4 +1,4 @@
 
-#faqs .title {
+#faqs .title, #answers .title {
     font-weight: bold;
 }

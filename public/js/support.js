@@ -24,6 +24,12 @@ $(document).ready(function() {
             $("#answers").addClass('hidden');
             $("#faqs").removeClass('hidden');
         }
+        // show an error
+        if (searchTerm.length > 0 && answers.length === 0) {
+            $("#input-message").addClass('has-error').html('<p class="help-block"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Sorry. Please try a different search term or keyword.</p>');
+        } else {
+            $("#input-message").removeClass('has-error').html('');
+        }
     });
     
 });
