@@ -1,6 +1,11 @@
 <% layout('../layouts/page') -%>
+<% script('/js/support.js') -%>
 
-<div class="col-md-10 col-md-offset-1">
-    <h1>Support</h1>
-    <p>This is the support landing page.</p>
+<div class="form-group container">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+        <input id="searchInput" type="text" class="form-control" placeholder="Not wired up...">
+    </div>
 </div>
+
+<% include ./faqs %>
