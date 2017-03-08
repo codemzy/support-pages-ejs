@@ -2,3 +2,16 @@
 #faqs .title, #answers .title {
     font-weight: bold;
 }
+
+#page-wrap {
+    min-height: calc(100vh - 143px);
+}
+
+.footer {
+    color: #ffffff;
+}
+
+.footer p {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
