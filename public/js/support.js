@@ -29,7 +29,7 @@ $(document).ready(function() {
         }
         // show an error
         if (searchTerm.length > 0 && answers.length === 0) {
-            $("#input-message").html('<p class="help-block"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Sorry. Please try a different search term or keyword.</p>');
+            $("#input-message").html('<p class="help-block"><small><i class="fa fa-times-circle" aria-hidden="true"></i> No results, please try a different search term or keyword.</small></p>');
             $('.search-form').addClass('has-error');
         } else {
             $("#input-message").html('');
