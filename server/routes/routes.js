@@ -7,7 +7,7 @@ module.exports = function (app) {
     // INDEX ROUTES
     app.get('/', function(req, res) {
         // res.sendFile(process.cwd() + '/public/html/index.html');
-        res.json({ hello: "world" });
+        res.render('pages/index');
     });
     
     // ---------- TEMPLATES -------------
