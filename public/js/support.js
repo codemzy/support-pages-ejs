@@ -6,10 +6,13 @@ $(document).ready(function() {
     // SEARCH
     $("#searchInput").keyup(function() {
         var searchTerm = $("#searchInput").val();
-        var answers = [];
+        var answers = []; // to hold matching items
         if (searchTerm.length > 0) {
-            $('#faqs div:contains("' + searchTerm + '")').closest('.col-md-4').each(function() {
-                answers.push($(this).html());
+            $("#faqs .col-md-4").map(function(item) {
+                var reg = new RegExp(searchTerm, "i"); // perform case insensitive search
+                if (reg.test($(this).text())) {
+                    answers.push($(this).html()); // if matches push to answers
+                }
             });
         }
         if (answers.length > 0) {
@@ -26,9 +29,11 @@ $(document).ready(function() {
         }
         // show an error
         if (searchTerm.length > 0 && answers.length === 0) {
-            $("#input-message").addClass('has-error').html('<p class="help-block"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Sorry. Please try a different search term or keyword.</p>');
+            $("#input-message").html('<p class="help-block"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Sorry. Please try a different search term or keyword.</p>');
+            $('.search-form').addClass('has-error');
         } else {
-            $("#input-message").removeClass('has-error').html('');
+            $("#input-message").html('');
+            $('.search-form').removeClass('has-error');
         }
     });
     
